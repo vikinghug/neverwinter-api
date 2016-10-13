@@ -22,18 +22,17 @@ ActiveRecord::Schema.define(version: 20161012235404) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "klass_id"
+    t.integer  "user_id"
   end
 
   add_index "builds", ["klass_id"], name: "index_builds_on_klass_id", using: :btree
+  add_index "builds", ["user_id"], name: "index_builds_on_user_id", using: :btree
 
   create_table "klasses", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer  "build_id"
   end
-
-  add_index "klasses", ["build_id"], name: "index_klasses_on_build_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email"
@@ -42,5 +41,5 @@ ActiveRecord::Schema.define(version: 20161012235404) do
   end
 
   add_foreign_key "builds", "klasses"
-  add_foreign_key "klasses", "builds"
+  add_foreign_key "builds", "users"
 end
