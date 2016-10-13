@@ -5,3 +5,17 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+klasses = [
+  {name: 'Great Weapon Fighter'},
+  {name: 'Guardian Fighter'},
+  {name: 'Devoted Cleric'},
+  {name: 'Scourge Warlock'},
+  {name: 'Control Wizard'},
+  {name: 'Trickster Rogue'},
+  {name: 'Hunter Ranger'},
+  {name: 'Oathbound Paladin'},
+]
+
+klasses.each do |k|
+  Klass.find_or_create_by(k)
+end
