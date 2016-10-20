@@ -1,13 +1,14 @@
 <p id="notice"><%= notice %></p>
 
+<pre>Last updated <%= time_ago_in_words(@build.updated_at) %> ago</pre>
 <p>
   <strong>Name:</strong>
   <%= @build.name %>
 </p>
 
 <p>
-  <strong>Klass:</strong>
-  <%= @build.inspect %>
+  <strong>class:</strong>
+  <%= @build.klass.name %>
 </p>
 
 <%= link_to 'Edit', edit_build_path(@build) %> |

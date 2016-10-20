@@ -1,10 +1,16 @@
 class BuildsController < ApplicationController
   before_action :set_build, only: [:show, :edit, :update, :destroy]
+  expose(:klasses, ->{ Klass.all })
 
   # GET /builds
   # GET /builds.json
   def index
-    @builds = Build.all
+    if params[:klass_id]
+      @builds = Build.where(klass_id: params[:klass_id])
+                     .paginate(page: params[:page])
+    else
+      @builds = Build.paginate(page: params[:page])
+    end
   end
 
   # GET /builds/1
@@ -15,7 +21,6 @@ class BuildsController < ApplicationController
   # GET /builds/new
   def new
     @build = Build.new
-    @klasses = Klass.all
   end
 
   # GET /builds/1/edit
@@ -70,6 +75,6 @@ class BuildsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def build_params
-      params.require(:build).permit(:name, :klass)
+      params.require(:build).permit(:name, :klass_id)
     end
 end
