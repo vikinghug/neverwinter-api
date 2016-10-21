@@ -1,0 +1,24 @@
+.class-filter {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    background: $white;
+    margin: 0.25rem;
+    padding: 0.25rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    &.active {
+      background: $blue;
+      a { color: $white; }
+    }
+  }
+
+  a { color: $blue; }
+}

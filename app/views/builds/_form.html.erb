@@ -16,7 +16,7 @@
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= collection_select(:klass, :klass_id, @klasses, :id, :name) %>
+    <%= collection_select(:build, :klass_id, klasses, :id, :name) %>
   </div>
   <div class="actions">
     <%= f.submit %>

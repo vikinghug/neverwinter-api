@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Skill Types</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Klass</th>
+      <th>Skills</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @skill_types.each do |skill_type| %>
+      <tr>
+        <td><%= skill_type.name %></td>
+        <td><%= skill_type.klass %></td>
+        <td><%= skill_type.skills %></td>
+        <td><%= link_to 'Show', skill_type %></td>
+        <td><%= link_to 'Edit', edit_skill_type_path(skill_type) %></td>
+        <td><%= link_to 'Destroy', skill_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Skill type', new_skill_type_path %>

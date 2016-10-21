@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
-  resources :klasses
+  resources :skill_types
+  resources :skills
+  resources :paragons
+  resources :klasses do
+    resources :builds
+  end
   resources :builds
   resources :users
   # The priority is based upon order of creation: first created -> highest priority.

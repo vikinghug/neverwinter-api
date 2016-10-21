@@ -5,17 +5,14 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-klasses = [
-  {name: 'Great Weapon Fighter'},
-  {name: 'Guardian Fighter'},
-  {name: 'Devoted Cleric'},
-  {name: 'Scourge Warlock'},
-  {name: 'Control Wizard'},
-  {name: 'Trickster Rogue'},
-  {name: 'Hunter Ranger'},
-  {name: 'Oathbound Paladin'},
-]
+seed_file = Rails.root.join('db', 'seeds', 'mod10', 'guardian_fighter.yml')
+klass = YAML::load_file(seed_file)
 
-klasses.each do |k|
-  Klass.find_or_create_by(k)
+klass['skills'].each do |s|
+  s['klass'] = Klass.find_or_create_by(name: klass['name'])
+  s['skill_type'] = SkillType.find_or_create_by(name: s['skill_type'])
+  s.delete('ranks') if s['ranks']
+
+  s['paragon'] = Paragon.find_or_create_by(name: s['paragon']) if s['paragon']
+  Skill.find_or_create_by(s)
 end

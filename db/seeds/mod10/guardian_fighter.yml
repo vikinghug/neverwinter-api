@@ -1,0 +1,264 @@
+name: Guardian Fighter
+mod: 10
+paragons:
+  - name: Swordmaster
+  - name: Iron Vanguard
+
+skills:
+  # ROW 0
+  -
+    name: Cleave
+    points: 0
+    skill_type: At Will
+    row: 0
+    slot: 0
+    ranks:
+      1: "You swing through foes in from of you. The third hit deals additional damage"
+      2: "Damge: +10%"
+      3: "Damge: +10%"
+      4: "Damge: +10%"
+  -
+    name: Tide of Iron
+    points: 0
+    skill_type: At Will
+    row: 0
+    slot: 1
+    ranks:
+      1:
+      2:
+      3:
+      4:
+  -
+    name: Lunging Strike
+    points: 0
+    skill_type: Encounter
+    row: 0
+    slot: 2
+    ranks:
+      1:
+      2:
+      3:
+      4:
+  -
+    name: Villain's Menace
+    points: 0
+    skill_type: Daily
+    row: 0
+    slot: 3
+    ranks:
+      1:
+      2:
+      3:
+      4:
+  -
+    name: Shield Talent
+    points: 0
+    skill_type: Class Feature
+    row: 0
+    slot: 4
+    ranks:
+      1:
+      2:
+      3:
+      4:
+
+  # ROW 1
+  -
+    name: Enforced Threat
+    points: 5
+    skill_type: Encounter
+    row: 1
+    slot: 0
+    ranks:
+      1:
+      2:
+      3:
+      4:
+  -
+    name: Griffon's Wrath
+    points: 5
+    skill_type: Encounter
+    row: 1
+    slot: 1
+    ranks:
+      1:
+      2:
+      3:
+      4:
+
+  # ROW 2
+  -
+    name: Fighter's Recovery
+    points: 10
+    skill_type: Daily
+    row: 2
+    slot: 2
+    ranks:
+      1:
+      2:
+      3:
+      4:
+  -
+    name: Terrifying Impact
+    points: 10
+    skill_type: Daily
+    row: 2
+    slot: 3
+    ranks:
+      1:
+      2:
+      3:
+      4:
+
+  # ROW 3
+  -
+    name: Knee Breaker
+    points: 15
+    skill_type: Encounter
+    row: 3
+    slot: 0
+  -
+    name: Enhanced Mark
+    points: 15
+    skill_type: Class Feature
+    row: 3
+    slot: 1
+  -
+    name: Guarded Assault
+    points: 15
+    skill_type: Class Feature
+    row: 3
+    slot: 2
+
+  # ROW 4
+  -
+    name: Rank 3
+    points: 20
+    skill_type: Unlock
+    row: 4
+    slot: 0
+  -
+    name: Crushing Surge
+    points: 20
+    skill_type: At Will
+    row: 4
+    slot: 1
+  -
+    name: Knight's Challenge
+    points: 20
+    skill_type: Encounter
+    row: 4
+    slot: 2
+  -
+    name: Combat Superiority
+    points: 20
+    skill_type: Class Feature
+    row: 4
+    slot: 3
+
+  # ROW 5
+  -
+    name: Anvil of Doom
+    points: 30
+    skill_type: Encounter
+    row: 5
+    slot: 0
+    ranks:
+      1:
+      2:
+      3:
+      4:
+  -
+    name: Frontline Surge
+    paragon: Iron Vanguard
+    points: 30
+    skill_type: Encounter
+    row: 5
+    slot: 1
+    ranks:
+      1:
+      2:
+      3:
+      4:
+
+  -
+    name: Flourish
+    paragon: Swordmaster
+    points: 30
+    skill_type: Encounter
+    row: 5
+    slot: 1
+    ranks:
+      1:
+      2:
+      3:
+      4:
+  -
+    name: Ferocious Reaction
+    paragon: Iron Vanguard
+    points: 30
+    skill_type: Class Feature
+    row: 5
+    slot: 2
+    ranks:
+      1:
+      2:
+      3:
+      4:
+
+  -
+    name: Steel Blitz
+    paragon: Swordmaster
+    points: 30
+    skill_type: Class Feature
+    row: 5
+    slot: 2
+    ranks:
+      1:
+      2:
+      3:
+      4:
+
+  # ROW 6
+  -
+    name: Threatening Rush
+    paragon: Iron Vanguard
+    points: 35
+    skill_type: At Will
+    row: 6
+    slot: 0
+  -
+    name: Weapon Master's Strike
+    paragon: Swordmaster
+    points: 35
+    skill_type: At Will
+    row: 6
+    slot: 1
+  -
+    name: Into The Fray
+    points: 35
+    skill_type: Encounter
+    row: 6
+    slot: 2
+
+  # ROW 7
+  -
+    name: Supremacy of Steel
+    points: 40
+    skill_type: Daily
+    row: 7
+    slot: 0
+  -
+    name: Trample the Fallen
+    paragon: Iron Vanguard
+    points: 40
+    skill_type: Class Feature
+    row: 7
+    slot: 1
+  -
+    name: Steel Defense
+    paragon: Swordmaster
+    points: 40
+    skill_type: Class Feature
+    row: 7
+    slot: 2

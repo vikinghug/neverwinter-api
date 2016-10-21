@@ -2,11 +2,26 @@
 
 <h1>Listing Builds</h1>
 
+<ul class="class-filter">
+  <% active_show_all = 'active' if !params[:klass_id].present? %>
+  <li class="<%= active_show_all %>"><%= link_to 'Show All', builds_path %></li>
+  <% klasses.each do |klass| %>
+    <% active_build = 'active' if klass.id.to_s == params[:klass_id].to_s %>
+    <li class="<%= active_build %>">
+      <%= link_to klass_builds_path(klass) do %>
+        <%= image_tag "class_icons/#{klass.name.parameterize}" %>
+      <% end %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to 'New Build', new_build_path %>
+
 <table>
   <thead>
     <tr>
       <th>Name</th>
-      <th>Klass</th>
+      <th>Class</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -15,7 +30,7 @@
     <% @builds.each do |build| %>
       <tr>
         <td><%= build.name %></td>
-        <td><%= build.klass %></td>
+        <td><%= build.klass.name %></td>
         <td><%= link_to 'Show', build %></td>
         <td><%= link_to 'Edit', edit_build_path(build) %></td>
         <td><%= link_to 'Destroy', build, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -25,5 +40,4 @@
 </table>
 
 <br>
-
-<%= link_to 'New Build', new_build_path %>
+<%= will_paginate @builds %>
