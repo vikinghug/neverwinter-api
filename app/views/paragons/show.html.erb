@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @paragon.name %>
+</p>
+
+<p>
+  <strong>Klass:</strong>
+  <%= @paragon.klass %>
+</p>
+
+<p>
+  <strong>Skills:</strong>
+  <%= @paragon.skills %>
+</p>
+
+<%= link_to 'Edit', edit_paragon_path(@paragon) %> |
+<%= link_to 'Back', paragons_path %>

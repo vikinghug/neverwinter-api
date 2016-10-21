@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :skill_types
+  resources :skills
+  resources :paragons
   resources :klasses do
     resources :builds
   end

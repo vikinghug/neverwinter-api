@@ -1,0 +1,1 @@
+json.array! @paragons, partial: 'paragons/paragon', as: :paragon
